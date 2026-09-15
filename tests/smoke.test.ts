@@ -267,7 +267,7 @@ timeline("missing-contributor");
 console.log = originalLog;
 assert.equal(
   capturedTimelineOutput,
-  "No verified merged pull requests found for this contributor."
+  "@missing-contributor first merged PR timeline\n\nNo verified merged pull requests found for this contributor."
 );
 
 console.log("Smoke tests passed.");
