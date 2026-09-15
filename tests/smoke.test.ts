@@ -262,9 +262,12 @@ console.log = (msg: string) => {
   capturedTimelineOutput = msg;
 };
 
-timeline();
+timeline("missing-contributor");
 
 console.log = originalLog;
-assert.equal(capturedTimelineOutput, "Not implemented yet.");
+assert.equal(
+  capturedTimelineOutput,
+  "@missing-contributor first merged PR timeline\n\nNo verified merged pull requests found for this contributor."
+);
 
 console.log("Smoke tests passed.");
